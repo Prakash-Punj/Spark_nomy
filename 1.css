@@ -1,0 +1,560 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+  --bg: #f2f2f2;
+  --text: #8134af;
+  --h2: #999999;
+  --h4: #6b7280;
+  --disbg: #ffb1b1;
+  --disputed: #ff2d55;
+  --paidbg: #9cefb8;
+  --paid: #34c759;
+  --partially: #ffcc00;
+  --brcolor: #cccccc6e;
+
+}
+
+h2, h3, h4 {
+  margin: 0.62rem 0;
+}
+.flex{
+  display: flex;
+}
+
+.container {
+  padding: 0.9rem;
+}
+
+/* ----- Header ----- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.62rem 0.9rem;
+  background: #fff;
+  box-shadow: 0 2px 4px var(--bg);
+  top: 0;
+}
+
+.header-btn {
+  border: none;
+  background: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.profile img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+
+/* ----- Invoice-Box ----- */
+.invoice-box {
+  background: #fff;
+  padding: 1.25rem;
+  border-radius: 30px;
+  text-align: center;
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.invoice-box .create{
+  background-color: var(--bg);
+  border-radius: 31px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 100%;
+  padding: 1.5rem;
+}
+
+.plus-icon {
+  width: 4.3rem;
+  height: 4.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: var(--text);
+
+  border-radius: 50%; 
+  position: relative;
+  background: #fff; 
+  cursor: pointer;
+  z-index: 1;
+}
+
+.plus-icon::before {
+  content: "";
+  position: absolute;
+  inset: 0; 
+  border-radius: 50%;
+  padding: 3px; 
+  background: linear-gradient(
+    1deg,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  z-index: -1;
+}
+
+.plus-icon:hover {
+  background: linear-gradient(
+    1deg,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+  color: #fff;
+}
+
+.invoice-box h3{
+  background: linear-gradient(1deg, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; 
+  color: transparent;
+  font-size: 27px;
+}
+.invoice-box p{
+  color: var(--h4);
+}
+
+.invoice-box .small {
+  font-size: 1.06rem;
+  color: var(--text);
+}
+
+/* ----- ----- Time Period ----- ----- */
+
+.time-period {
+  margin: 0.9rem 0;
+  color: var(--h4);
+  border: 2px solid var(--brcolor);
+  border-radius: 31px;
+  padding: 0.8rem;
+  margin: 8px -20px;
+}
+.time-period .date{
+  justify-content: space-between;
+}
+.time-period .date h4{
+  font-size: 1.1rem;
+}
+.time-period input {
+  margin: 5px;
+  border: none;
+  color: var(--h4);
+}
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  color: var(--h4);
+}
+.btn-group button {
+  border: 1px solid var(--brcolor);
+  padding: 0.43rem 1.06rem;
+  border-radius: 20px;
+  background: none;
+  color: var(--h4);
+  cursor: pointer;
+  font-size: 1.125rem;
+}
+.btn-group .active {
+  background: #ceb7fa;
+  color: var(--text);
+}
+
+/* ----- ----- Summary ----- ----- */
+
+.summary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 0.9rem;
+  text-align: left;
+  width: 100%;
+  flex-direction: column;
+}
+.summary .box {
+  flex: 1;
+  background: #fff;
+  padding: 0.75rem;
+  border-radius: 25px;
+  border: 3px solid var(--brcolor);
+}
+.summary .box h4{
+  color: var(--h4);
+  font-size: 1.3rem;
+}
+.summary .box p {
+  font-weight: bold;
+  color: var(--text);
+  font-size: 1.8rem;
+  line-height: 0px;
+}
+.summary .payment{
+  gap: 5px;
+}
+.summary .payment p{
+  font-size: 1.56rem;
+  margin-bottom: 1px;
+}
+
+/* ----- ----- Trend ----- ----- */
+
+.trend {
+  background: #fff;
+  padding: 0.9rem;
+  border-radius: 12px;
+  margin-bottom: 1.25rem;
+  border: 2px solid var(--brcolor);
+}
+.trend p{
+  font-size: 1.3rem;
+  color: var(--h2);
+}
+
+/* ----- ----- Chart ----- ----- */
+
+.chart_main {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25rem;
+}
+
+.chart-container {
+  width: 115%; 
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.chart-title {
+  font-weight: bold;
+  margin-bottom: 4px;
+  font-size: 0.87rem;
+  color: var(--h4);
+}
+
+.chart-subtitle {
+  font-size: 0.75rem;
+  color: var(--h4);
+  margin-bottom: 1rem;
+}
+
+.chart-content {
+  position: relative;
+  height: 16.2rem;
+  display: flex;
+}
+
+.y-axis-left {
+  width: 2.5rem;
+  font-size: 0.68rem;
+  color: var(--h4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-right: 4px;
+}
+
+.y-axis-right {
+  width: 2.5rem;
+  font-size: 0.68rem;
+  color: var(--h4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-left: 4px;
+}
+
+.chart {
+  flex: 1;
+  position: relative;
+  border-left: 2px solid var(--h2);
+  border-bottom: 2px solid var(--h2);
+  border-right: 2px solid var(--h2);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 0 5px;
+  overflow: hidden;
+}
+
+.x-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--bg);
+}
+.x-20 { bottom: 20%; }
+.x-40 { bottom: 40%; }
+.x-60 { bottom: 60%; }
+.x-80 { bottom: 80%; }
+.x-100 { bottom: 100%; }
+
+.month {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 2.5rem; 
+}
+
+.bar {
+  width: 1.87rem;
+  border-radius: 6px 6px 0 0;
+  background: var(--text);
+}
+.bar.jan { height: calc(200px * 3500 / 8000); }
+.bar.feb { height: calc(200px * 4800 / 8000); }
+.bar.mar { height: calc(200px * 6700 / 8000); }
+.bar.apr { height: calc(200px * 2500 / 8000); }
+.bar.may { height: calc(200px * 5600 / 8000); }
+.bar.jun { height: calc(200px * 0 / 8000); }
+
+.month-name {
+  margin-top: 4px;
+  font-size: 0.75rem;
+  color: var(--h4);
+}
+
+.menu{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.62rem;
+  font-size: 0.75rem;
+  color: var(--h4);
+}
+.menu span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.menu .box {
+  width: 0.87rem;
+  height: 0.87rem;
+  border-radius: 3px;
+}
+.menu .income-box { background: var(--text); }
+.menu .growth-box {
+  background: #5a2d2d;
+  border-radius: 50%;
+}
+
+.line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.line svg {
+  width: 100%;
+  height: 100%;
+}
+.line path {
+  fill: none;
+  stroke: #5a2d2d;
+  stroke-width: 2;
+}
+
+/* ----- ----- Invoices ----- ----- */
+
+.invoices {
+  background: #fff;
+  padding: 0.9rem;
+  border-radius: 12px;
+  margin-bottom: 1.25rem;
+}
+.invoices h4{
+  font-size: 1.56rem;
+  color: var(--h2);
+}
+.invoice {
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  border: 2px solid var(--brcolor);
+  border-radius: 15px;
+  margin-bottom: 5px;
+}
+.invoice p{
+  font-size: 1.125rem;
+  color: var(--h4);
+  line-height: 1px;
+}
+.invoice span{
+  font-size: 1rem;
+  color: var(--h4);
+}
+.invoice:last-child {
+  border-bottom: none;
+}
+.status {
+  border: none;
+  padding: 0.8rem 1.37rem;
+  border-radius: 51px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.status.update { background: var(--text); color: var(--bg); }
+.status.unpaid { background: var(--bg); color: var(--h4);}
+.status.paid { background: var(--paidbg); color: var(--paid);}
+.status.partial { background: #fff5e1; color: var(--partially);}
+.status.overdue { background: var(--disbg); color: var(--disputed);}
+.status.disputed { background: var(--disbg); color: var(--disputed); }
+.status.awaited { background: #fff5e1; color: var(--partially); }
+.status.draft { background: #ccc; color: var(--h4);}
+.invoice i{
+  margin-left: -125px;
+}
+
+/* ----- ----- Footer ----- ----- */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 30vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+}
+footer .content {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: var(--h4);
+  border-top: 2px solid var(--brcolor);
+  padding-top: 20px;
+}
+footer .content span {
+  font-weight: normal;
+  color: var(--h2);
+}
+.logo {
+  font-size: 1.375rem;
+  vertical-align: middle;
+  margin-left: 2px;
+  margin-right: 2px;
+  color: var(--text);
+}
+footer p {
+  margin-top: 6px;
+  font-size: 0.87rem;
+  color: var(--h4);
+}
+
+.scroll-animation {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.7s ease-out;
+}
+
+.scroll-animation.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+@media (max-width: 530px) {
+  html{
+    font-size: 12px;
+  }
+  .invoice-box .small{
+    margin: 24px -23px;
+    font-size: 0.9rem;
+  }
+  .invoice-box h3{
+    font-size: 23px;
+  }
+  .invoice-box p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .income-box .small{
+    font-size: 0.85rem;
+    margin: 28px -18px;
+  }
+  .time-period{
+    padding: 0.8rem;
+    margin: 8px -17px;
+  }
+  .time-period .date h4{
+    font-size: 1rem;
+    font-weight: 800;
+  }
+  .time-period input{
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+  }
+  .summary .box{
+    padding: 13px 11px;
+    width: 100%;
+    margin: 1px -15px;
+  }
+  .summary .box h4{
+    font-size: 1rem;
+  }
+  .summary .box p{
+    font-size: 1.3rem;
+    line-height: 23px;
+  }
+  .summary .payment{
+    gap: 37px;
+  }
+  .summary .payment h4{
+    font-size: 0.7rem;
+    font-weight: 800;
+    width: 101%;
+    line-height: 0px;
+  }
+  .summary .payment p{
+    margin-bottom: -3px;
+  }
+  .trend h4{
+    font-size: 1.5rem;
+  }
+  .trend p{
+    line-height: 23px;
+  }
+  .invoices{
+    padding: 0.9rem 0;
+  }
+  .invoice{
+    padding: 5px;
+    padding-bottom: 11px;
+  }
+  .invoice span{
+    font-size: 0.8rem;
+  }
+  .invoice button {
+    margin-top: 6px;
+  }
+  .status.overdue, .status.awaited, .status.draft{
+    margin-top: 0;
+    margin-right: 102px;
+  }
+}

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spark_nomy</title>
+  <link rel="stylesheet" href="1.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <header class="header">
+    <button class="header-btn"><i class="fa fa-chevron-left"></i> Back</button>
+    <h2>Dashboard</h2>
+    <div class="profile">
+      <img src="Profile.png" alt="Profile" />
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <section class="invoice-box scroll-animation">
+      <div class="create">
+        <div class="plus-icon">+</div>
+        <h3>Create New Invoice</h3>
+        <p>Start by creating and sending new invoice</p>
+      </div>
+
+      <p class="small">Or Upload an existing invoice and set payment reminder</p>
+
+      <div class="time-period scroll-animation">
+        <div class="flex date">
+          <h4>Time Period</h4>
+          <input type="text" value="dd:mm:yyyy - dd:mm:yyyy" readonly>
+        </div>
+        <div class="btn-group">
+          <button>1Month</button>
+          <button class="active">3Months</button>
+          <button>1Year <i class="fa-solid fa-crown"></i></button>
+          <button><i class="fa-regular fa-calendar-days"></i>
+            Custom</button>
+        </div>
+      </div>
+
+      <div class="summary scroll-animation">
+        <div class="box">
+          <h4>Total Earnings</h4>
+          <p>$1,25,000</p>
+        </div>
+        <div class="payment flex">
+          <div class="box">
+          <h4>Payment Awaited</h4>
+          <p>$25,000</p>
+        </div>
+        <div class="box">
+          <h4>Payment Overdue</h4>
+          <p>$25,000</p>
+        </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="trend scroll-animation">
+      <h4>Income Trend</h4>
+      <p>Your monthly income and growth for the last 6 months.</p>
+
+      <div class="chart_main">
+        <div class="chart-container">
+          <div class="chart-content">
+            <div class="y-axis-left">
+              <span>$8k</span>
+              <span>$6k</span>
+              <span>$4k</span>
+              <span>$2k</span>
+              <span>$0k</span>
+            </div>
+
+            <div class="chart">
+              <div class="x-line x-20"></div>
+              <div class="x-line x-40"></div>
+              <div class="x-line x-60"></div>
+              <div class="x-line x-80"></div>
+              <div class="x-line x-100"></div>
+
+              <div class="month">
+                <div class="bar jan"></div>
+                <div class="month-name">Jan</div>
+              </div>
+              <div class="month">
+                <div class="bar feb"></div>
+                <div class="month-name">Feb</div>
+              </div>
+              <div class="month">
+                <div class="bar mar"></div>
+                <div class="month-name">Mar</div>
+              </div>
+              <div class="month">
+                <div class="bar apr"></div>
+                <div class="month-name">Apr</div>
+              </div>
+              <div class="month">
+                <div class="bar may"></div>
+                <div class="month-name">May</div>
+              </div>
+              <div class="month">
+                <div class="bar jun"></div>
+                <div class="month-name">Jun</div>
+              </div>
+
+              <div class="line">
+                <svg viewBox="0 0 350 260" preserveAspectRatio="none">
+                <path d="M30 160 C80 100, 120 80, 170 160 C210 220, 270 100, 320 250" />
+                </svg>
+              </div>
+            </div>
+
+            <div class="y-axis-right">
+              <span>100%</span>
+              <span>50%</span>
+              <span>0%</span>
+              <span>-50%</span>
+              <span>-100%</span>
+            </div>
+    </div>
+
+          <div class="menu">
+            <span><div class="box income-box"></div> income</span>
+            <span><div class="box growth-box"></div> momGrowth</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="invoices">
+      <h4>Your Invoices</h4>
+      <div class="invoice flex scroll-animation">
+        <div>
+          <p>Client Name</p>
+          <span>₹1,25,000, Due: 2024-06-15</span>
+        </div>
+        <button class="status update">Update Status</button>
+      </div>
+      <div class="invoice flex scroll-animation">
+        <div>
+          <p>Client Name</p>
+          <span>₹1,25,000, Due: 2024-06-15</span>
+        </div>
+        <button class="status unpaid">Unpaid</button>
+      </div>
+      <div class="invoice flex scroll-animation">
+        <div>
+          <p>Income Trend</p>
+          <span>₹1,25,000, Due: 2024-06-15</span>
+        </div>
+        <button class="status disputed">Disputed</button>
+      </div>
+      <div class="invoice flex scroll-animation">
+        <div>
+          <p>Income Trend</p>
+          <span>₹1,25,000, Due: 2024-06-15</span>
+        </div>
+        <button class="status paid">Paid</button>
+      </div>
+      <div class="invoice flex scroll-animation">
+        <div>
+          <p>Income Trend</p>
+          <span>₹1,25,000, Due: 2024-06-15</span>
+        </div>
+        <button class="status paid">Paid</button>
+      </div>
+      <div class="invoice flex scroll-animation">
+        <div>
+          <p>Income Trend</p>
+          <span>₹1,25,000, Due: 2024-06-15</span>
+        </div>
+        <button class="status partial">Partially Paid</button>
+      </div>
+      <div class="invoice flex scroll-animation">
+        <div>
+          <p>Income Trend</p>
+          <span>₹1,25,000, Due: 2024-06-15</span>
+        </div>
+        <button class="status paid">Paid</button>
+      </div>
+      <div class="invoice flex scroll-animation">
+        <div>
+          <p>Income Trend</p>
+          <span>₹1,25,000, Due: 2024-06-15</span>
+        </div>
+        <button class="status overdue">Overdue </button>
+        <i class="fa-regular fa-bell"></i>
+      </div>
+      <div class="invoice flex scroll-animation">
+        <div>
+          <p>Income Trend</p>
+          <span>₹1,25,000, Due: 2024-06-15</span>
+        </div>
+        <button class="status awaited">Awaited </button>
+        <i class="fa-regular fa-bell"></i>
+      </div>
+      <div class="invoice flex scroll-animation">
+        <div>
+          <p>Income Trend</p>
+          <span>₹1,25,000, Due: 2024-06-15</span>
+        </div>
+        <button class="status draft">Draft</button>
+        <i class="fa-solid fa-pencil"></i>
+      </div>
+      <div class="invoice flex scroll-animation">
+        <div>
+          <p>Income Trend</p>
+          <span>₹1,25,000, Due: 2024-06-15</span>
+        </div>
+        <button class="status paid">Paid</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="scroll-animation">
+    <div class="content">
+      Spark<span class="logo"><i class="fa-solid fa-paw"></i></span><span>nomy</span>
+    </div>
+    <p>sparking the creator economy</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script src="1.js"></script>
+
+</body>
+</html>
